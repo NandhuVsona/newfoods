@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="value">
+
+  <button type="submit">submit</button>
+  <p id="p"></p>
+  <script>
+   let btn= document.querySelector("button");
+btn.addEventListener("click",()=>{
+  
+  let value = document.getElementById("value").value;
+    localStorage.setItem('myData',JSON.stringify(value))
+    b=(localStorage.getItem("myData"));
+    document.getElementById('p').innerHTML+=b
+})
+b=(localStorage.getItem("myData"));
+    document.getElementById('p').innerHTML+=b
+
+  </script>
+</body>
+</html>
