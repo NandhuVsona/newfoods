@@ -1,7 +1,7 @@
 //------------JavaScript-----------
 
-import { card} from "./Data/card.js";
-import {saveToStorage} from "./Data/card.js"
+//import { card} from "./Data/card.js";
+//import {saveToStorage} from "./Data/card.js"
 
 let cardContainer = document.querySelector(".cards-container");
 let trendImg = document.querySelector(".trend-img");
