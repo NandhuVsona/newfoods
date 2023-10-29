@@ -1,7 +1,6 @@
 //------------JavaScript-----------
 
-import { card} from "./Data/card.js";
-import {saveToStorage} from "./Data/card.js"
+import { card,saveToStorage} from "./Data/card.js";
 
 let cardContainer = document.querySelector(".cards-container");
 let trendImg = document.querySelector(".trend-img");
@@ -171,6 +170,7 @@ products.forEach((item) => {
     <span class="light">M.R.P:<strike class="light">&#8377 ${item.mrp}</strike>(${item.offer}% Off)</span>
   </div>
   <button class="addtoplate" data-product-name="${item.productName}">Add To Plate</button>
+  <span id="biscuit"></span>
 </div>`;
   
 
@@ -255,6 +255,7 @@ nonvegitems.forEach((item) => {
             <p class="rupees">&#8377<span class="rupees"></span>${item.price}</p>
             <span class="light">M.R.P:<strike class="light">&#8377 ${item.mrp}</strike>(${item.offer}% Off)</span>
           </div>
+          <span id="IceCream"></span>
           <button class="addtoplate" data-product-name="${item.productName}">Add To Plate</button>
         </div>`;
   nonVeg.innerHTML += nonevegs;
@@ -568,6 +569,11 @@ hide.forEach((btn) => {
     notify.style.display = "none";
   });
 });
+
+
+// click on animation scroll
+
+
 
 // setTimeout(() => {
 //   notify.style.display = "flex";
