@@ -183,7 +183,7 @@
 </style>
 
 <body id="theme">
-  <!-- <div class="start-container">
+  <div class="start-container">
     <div class="start">
       <button class="loadingbtn">GET START</button>
     </div>
@@ -192,7 +192,7 @@
     <div class="box"></div>
     <h1 id="count"></h1>
     <h2>Loading..</h2>
-  </div> -->
+  </div>
 
   <section id="section">
     <div class="notification">
@@ -555,7 +555,37 @@ function showNonveg(){
   <script type="module" src="./Data/cardItems.js"></script>
   <script type="module" src="script.js"></script>
   </section>
-  
+  <!-- <script>
+
+    let btn = document.querySelector(".button");
+    btn.addEventListener('click', () => {
+      let audio = new Audio();
+      audio.src = './audio.mp3';
+      audio.play()
+      document.querySelector(".start-container").style.display = "none";
+      document.querySelector(".container").style.display = "flex"
+      let count = document.getElementById("count");
+      let i = 0;
+      let section = document.getElementById('section')
+      setInterval(() => {
+        if (i < 100) {
+          i++;
+        } else {
+          i = 100;
+
+          let a = document.querySelector('.container');
+          a.style.display = "none";
+          section.style.display = "block"
+
+
+
+        }
+        count.textContent = i + "%";
+      }, 160)
+    })
+
+
+  </script> -->
 </body>
 
 </html>

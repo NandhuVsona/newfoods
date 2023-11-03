@@ -1,7 +1,7 @@
 //------------JavaScript-----------
 
-import { card,saveToStorage} from "./Data/card.js";
-//import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+import { card} from "./Data/card.js";
+import {saveToStorage} from "./Data/card.js"
 
 let cardContainer = document.querySelector(".cards-container");
 let trendImg = document.querySelector(".trend-img");
@@ -581,10 +581,3 @@ hide.forEach((btn) => {
 //   notify.style.display = "flex";
 //   login.style.transform = "scale(1)";
 // }, 29100);
- 
-// const today = dayjs()
-// const deliveryDate = today.add(7,"days");
-// const fDeliveryDate = today.add(1,"days")
-// console.log("fast delivery ",fDeliveryDate.format('dddd,MMMM D'))
-// console.log('free delivery ',deliveryDate.format('dddd, MMMM D'))
-
