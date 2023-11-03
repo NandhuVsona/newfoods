@@ -32,6 +32,10 @@ body {
   position: relative;
 }
 
+section {
+  display: none !important;
+}
+
 .notification {
   position: absolute;
   background-color: rgba(51, 51, 51, 0.8941176471);
@@ -214,7 +218,7 @@ img {
   top: 0;
   left: -100%;
   z-index: -2;
-  background-color: #0e8847;
+  background-color: #0E8388;
   transition: all 0.4s ease;
 }
 .left-container .menu .item-list .list:hover p, .left-container .menu .item-list .list:hover i {
@@ -351,18 +355,18 @@ img {
   transition: all 0.5s ease;
   opacity: 0;
 }
-.center-container .carditems .card-container {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 2fr 1.5fr;
-}
 .center-container .carditems.showcarditems {
   transform: translateX(0px);
   transition: all 0.5s ease;
   z-index: 2;
   opacity: 1;
 }
-.center-container .carditems .product-details {
+.center-container .carditems .card-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+}
+.center-container .carditems .card-container .product-details {
   text-align: center;
   border-right: 1px solid #787878;
   height: 100vh;
@@ -370,7 +374,7 @@ img {
   overflow-y: scroll;
   padding-bottom: 80px;
 }
-.center-container .carditems .product-details .selecteditems {
+.center-container .carditems .card-container .product-details .selecteditems {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -378,7 +382,7 @@ img {
   padding: 10px 10px;
   border-bottom: 1px solid #818181;
 }
-.center-container .carditems .product-details .selecteditems .card-img img {
+.center-container .carditems .card-container .product-details .selecteditems .card-img img {
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
@@ -387,25 +391,75 @@ img {
      object-position: center;
   border-radius: 10%;
 }
-.center-container .carditems .product-details .selecteditems .product-d {
+.center-container .carditems .card-container .product-details .selecteditems .product-d {
   margin-left: 10px;
 }
-.center-container .carditems .product-details .selecteditems .product-d p,
-.center-container .carditems .product-details .selecteditems .product-d span {
+.center-container .carditems .card-container .product-details .selecteditems .product-d p,
+.center-container .carditems .card-container .product-details .selecteditems .product-d span {
   font-size: 14px;
 }
-.center-container .carditems .product-details .selecteditems .product-d .btns {
+.center-container .carditems .card-container .product-details .selecteditems .product-d .btns {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-.center-container .carditems .product-details .selecteditems .product-d .btns button {
+.center-container .carditems .card-container .product-details .selecteditems .product-d .btns button {
   margin-left: 15px;
   padding: 5px 20px;
   background-color: #FFB000;
   border: none;
   border-radius: 3px;
+}
+.center-container .carditems .card-container .bill-amount .bill-details {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 10px 0px;
+  background-color: blueviolet;
+  height: 100%;
+}
+.center-container .carditems .card-container .bill-amount .bill-details .bill {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  list-style: none;
+}
+.center-container .carditems .card-container .bill-amount .bill-details .bill .bill > .bill-product-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.center-container .carditems .card-container .bill-amount .bill-details .final-amount {
+  text-align: right;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+.center-container .carditems .card-container .bill-amount .bill-details .final-amountbutton {
+  font-size: 20px;
+  font-weight: bold;
+  /* background-color: #FFB000; */
+  background: linear-gradient(to bottom right, rgb(255, 247, 0) 10%, rgb(213, 0, 255));
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  animation: glow 3s ease infinite;
+  transition: all 2s ease;
+  text-shadow: 0px 0px 1px #000000;
+}
+@keyframes glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .center-container .shoping-card {
   width: 50px;
@@ -1088,4 +1142,55 @@ img {
 
 .hamburger.ham {
   color: #ffffff !important;
+}
+
+.bill-amount .bill-details {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 10px 0px;
+  background-color: blueviolet;
+  height: 100%;
+}
+.bill-amount .bill-details .bill {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  list-style: none;
+}
+.bill-amount .bill-details .bill .bill > .bill-product-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.bill-amount .bill-details .final-amount {
+  text-align: right;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+.bill-amount .bill-details .final-amountbutton {
+  font-size: 20px;
+  font-weight: bold;
+  /* background-color: #FFB000; */
+  background: linear-gradient(to bottom right, rgb(255, 247, 0) 10%, rgb(213, 0, 255));
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  animation: glow 3s ease infinite;
+  transition: all 2s ease;
+  text-shadow: 0px 0px 1px #000000;
+}
+@keyframes glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */

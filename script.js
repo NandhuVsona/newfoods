@@ -1,6 +1,7 @@
 //------------JavaScript-----------
 
 import { card,saveToStorage} from "./Data/card.js";
+//import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
 let cardContainer = document.querySelector(".cards-container");
 let trendImg = document.querySelector(".trend-img");
@@ -15,7 +16,7 @@ let leftContainer = document.querySelector(".left-container");
 let darklight = document.getElementById("theme");
 let cheader = document.querySelector("#cheader");
 let showcarditems = document.querySelector(".carditems");
-let checkout = document.querySelector(".checkout");
+
 let showcard = document.querySelectorAll(".showcard");
 let rightContainer = document.querySelector(".right-container");
 //let centerContainer = document.querySelector(".center-container");
@@ -541,11 +542,11 @@ btns.forEach((btn) => {
     card.forEach((item) => {
       carditems += item.quantity;
     });
+    
 
     if (carditems < 10) {
       qnty.innerHTML = `0${carditems}`;
       checkout.innerHTML = carditems;
-      console.log(qnty);
     } else {
       qnty.innerHTML = carditems;
       checkout.innerHTML = carditems;
@@ -571,6 +572,7 @@ hide.forEach((btn) => {
 });
 
 
+
 // click on animation scroll
 
 
@@ -579,3 +581,10 @@ hide.forEach((btn) => {
 //   notify.style.display = "flex";
 //   login.style.transform = "scale(1)";
 // }, 29100);
+ 
+// const today = dayjs()
+// const deliveryDate = today.add(7,"days");
+// const fDeliveryDate = today.add(1,"days")
+// console.log("fast delivery ",fDeliveryDate.format('dddd,MMMM D'))
+// console.log('free delivery ',deliveryDate.format('dddd, MMMM D'))
+
