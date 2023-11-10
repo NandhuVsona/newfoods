@@ -1,4 +1,4 @@
-import { qnty } from "/script.js";
+let qnty = document.getElementById("quantity");
 
 
 export let card = JSON.parse(localStorage.getItem("savedItems"));
